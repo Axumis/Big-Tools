@@ -28,11 +28,6 @@ theme:
       
 nav:
   - Inicio: index.md
-  - Instalación: instalacion.md
-  - Uso: uso.md
-  - API: api.md
-  - Credenciales: credenciales.md
-  - Solución de Problemas: troubleshooting.md
   - Informe Sitema Experto: INFORME_SISTEMA_EXPERTO.md
 
 copyright: Copyright &copy; 2025 Tecnicatura Superior en Ciencia de Datos e Inteligencia Artificial - Politécnico Malvinas Argentinas

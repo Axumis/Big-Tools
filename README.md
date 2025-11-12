@@ -15,6 +15,12 @@
 
 ---
 
+## 📘 Documentación completa 
+
+**Disponible en:** https://axumis.github.io/Big-Tools/
+
+---
+
 ## 📋 Descripción General
 
 **Big Tools** es una aplicación web completa que ayuda a técnicos y administradores a diagnosticar fallas en máquinas industriales mediante:
@@ -51,7 +57,10 @@
 
 #### Opción 1: Usuario Windows (Recomendado)
 
-1. Descarga o clona el repositorio
+1. Descarga o clona el repositorio:
+```powershell
+https://github.com/Axumis/Big-Tools
+```
 2. Haz **doble clic** en `INICIAR_BIG_TOOLS.bat`
 3. El sistema automáticamente:
    - ✅ Verifica Python
@@ -73,11 +82,12 @@ python -m pip install -r requirements.txt
 cd Backend
 python -m uvicorn app:app --reload --host 127.0.0.1 --port 8000
 
-# 4. En otra terminal (con venv activado), generar documentación:
-mkdocs serve  # Accede a http://127.0.0.1:8000/docs
-
-# 5. Abrir navegador
+# 4. Abrir navegador
 http://127.0.0.1:8000
+
+# 5. En otra terminal (con venv activado), generar documentación:
+mkdocs serve -a 127.0.0.1:8001 # Accede a http://127.0.0.1:8001/docs
+
 ```
 
 #### Opción 3: Linux / macOS
@@ -184,7 +194,7 @@ Big-tools/
 ├── INICIAR_BIG_TOOLS.bat                # ⭐ Recomendado para Windows
 ├── run.bat                              # Alternativa para Windows
 ├── run.sh                               # Para Linux/macOS
-└── run_simple.py                        # Script Python multiplataforma
+├──  run_simple.py                        # Script Python multiplataforma
 │
 ├── .gitignore                           # Archivos ignorados por git
 │   └── 📁 venv/                         # Entorno virtual Python
@@ -820,10 +830,6 @@ Este proyecto está licenciado bajo la Licencia MIT - ver detalles en el archivo
 
 ---
 
-<div align="center">
-
----
-
 ## 👨‍💻👩‍💻 Desarrolladores
 - **Maximiliano Ruiz:** [maxi9304@gmail.com](mailto:maxi9304@gmail.com)  
 - **Yanina Barrios:** [yansolsur17@gmail.com](mailto:yansolsur17@gmail.com)  
@@ -832,6 +838,7 @@ Este proyecto está licenciado bajo la Licencia MIT - ver detalles en el archivo
 - **Marcelo Renzone:** [marcelorenzone@gmail.com](mailto:marcelorenzone@gmail.com)
 
 ---
+<div align="center">
 
 **Desarrollado para Big Tools** - Sistema de Diagnóstico Industrial
 
