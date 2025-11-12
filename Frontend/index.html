@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Tools - Chatbot</title>
+
+    <!-- Favicon y estilos -->
+    <link rel="icon" href="/static/assets/img/logo_bigtools.png" type="image/png">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <!-- Canvas para partículas de fondo -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Modal de Login -->
+    <div id="login-modal" class="modal">
+        <!-- Tarjetas izquierda -->
+        <div class="machine-cards left">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="/static/assets/img/hidrolavadora.jpg" alt="Hidrolavadora">
+                        <h3>Hidrolavadora Kärcher</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="/static/assets/img/generador.jpg" alt="Generador">
+                        <h3>Generador Generac Guardian</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal central -->
+        <div class="modal-content">
+            <div class="logo-container">
+                <img src="/static/assets/img/logo_bigtools.png" alt="Big Tools" class="login-logo">
+            </div>
+            <h2>Iniciar Sesión</h2>
+            <p>Por favor, ingresa tus credenciales para acceder al sistema</p>
+            <form id="login-form">
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="Usuario" required autocomplete="username">
+                    <span class="input-highlight"></span>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Contraseña" required autocomplete="current-password">
+                    <span class="input-highlight"></span>
+                </div>
+                <button type="submit" class="login-btn">
+                    <span>Ingresar</span>
+                    <div class="btn-shine"></div>
+                </button>
+            </form>
+            <p id="login-error" class="error-msg"></p>
+        </div>
+
+        <!-- Tarjetas derecha -->
+        <div class="machine-cards right">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="/static/assets/img/motor.jpg" alt="Motor">
+                        <h3>Motor Cummins</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="/static/assets/img/soldadora.jpg" alt="Soldadora">
+                        <h3>Soldadora Miller Ranger 305D</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenedor principal (oculto hasta login) -->
+    <div id="main-container" class="container" style="display: none;">
+        <!-- Encabezado -->
+        <header class="header">
+            <div class="header-left">
+                <img src="/static/assets/img/logo_bigtools.png" alt="Big Tools" class="logo">
+                <h1>Asistente Big Tools</h1>
+            </div>
+
+            <div class="header-right">
+                <span id="user-display" class="user-display"></span>
+                <button id="reset-button" class="admin-btn">Reiniciar Chat</button>
+                <button id="admin-button" class="admin-btn" onclick="window.location.href='/admin'">Modo Administración</button>
+                <button id="logout-button" class="admin-btn logout-btn">Cerrar Sesión</button>
+            </div>
+        </header>
+
+        <!-- Chat principal -->
+        <main class="chat-container">
+            <div id="chat-window" class="chat-window">
+                <!-- Mensajes y botones aparecerán dinámicamente -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Librería jsPDF para exportar a PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- Configuración de la API (debe cargarse antes de main.js) -->
+    <script src="/static/js/config.js"></script>
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>
