@@ -505,53 +505,78 @@ Validaciones:
 ## 5. ESTRUCTURA DE ARCHIVOS
 
 ```
-Big-tools-3/
+Big-tools/
 │
-├── Backend/
-│   ├── api/
-│   │   ├── auth.py                    # Autenticación y tokens
-│   │   ├── base_conocimiento.py       # Carga de base de conocimiento
-│   │   ├── engine.py                  # Motor de inferencia
-│   │   ├── routes.py                  # Endpoints de la API
-│   │   └── stats.py                   # Gestión de estadísticas
+├── 📁 .github/                          # Configuración GitHub
+│   ├── 📁 workflows/
+│   │   └── ci.yml                       # CI/CD con MkDocs deployment
+│
+├── 📁 Backend/                          # API FastAPI y lógica del sistema
+│   ├── app.py                           # Aplicación principal (servidor)
+│   ├── 📁 api/                          # Módulos de la API
+│   │   ├── auth.py                      # Autenticación y gestión de tokens
+│   │   ├── base_conocimiento.py         # Carga/gestión de base de conocimiento
+│   │   ├── engine.py                    # Motor de inferencia (diagnóstico)
+│   │   ├── nodo.py                      # Estructura de árbol de decisión
+│   │   ├── routes.py                    # Endpoints de la API
+│   │   ├── stats.py                     # Gestión de estadísticas
+│   │   └──  response.py                  # Modelos de respuesta
 │   │
-│   ├── data/
-│   │   ├── base_conocimiento.json     # Base de conocimiento
-│   │   ├── users.json                 # Usuarios del sistema
-│   │   ├── manuales.json              # Registro de manuales
-│   │   ├── stats.json                 # Estadísticas de uso
-│   │   └── manuales_pdf/              # Archivos PDF
+│   ├── 📁 data/                         # Almacenamiento de datos (JSON)
+│   │   ├── base_conocimiento.json       # Árbol de decisión para diagnósticos
+│   │   ├── users.json                   # Usuarios registrados (SHA256)
+│   │   ├── manuales.json                # Índice de manuales PDF
+│   │   ├── stats.json                   # Estadísticas de uso
+│   │   └── 📁 manuales_pdf/             # Archivos PDF almacenados
 │   │       ├── HIDROLAVADORA.pdf
 │   │       ├── MANUAL CUMMINS 2.pdf
 │   │       ├── ranger_305d.pdf
-│   │       └── Generac_Manual_Usuario_Guardian_Series (1).pdf
+│   │       └── Generac_Manual_Usuario_Guardian_Series (1).pdf 
+│   │ 
+├── 📁 docs/                             # Sitio documentación MkDocs
+│   │   └── 📁 assets/                   # Archivos PDF almacenados
+│   │       ├── logo.ico                 # Imagen para la pestaña del navegador
+│   │       └── logo.png                 # Imagen para la página en MKDocs
 │   │
-│   └── app.py                         # Aplicación principal FastAPI
+│   ├── index.md                         # Página de inicio documentación
+│   └── INFORME_SISTEMA_EXPERTO.md       # Informe técnico completo
 │
-├── Frontend/
-│   ├── css/
-│   │   ├── admin.css                  # Estilos del dashboard
-│   │   ├── login.css                  # Estilos del login
-│   │   └── style.css                  # Estilos del chatbot
+├── 📁 Frontend/                         # Interfaz web (HTML/CSS/JS)
+│   ├── index.html                       # Página de login y chatbot
+│   ├── admin.html                       # Dashboard administrativo
 │   │
-│   ├── js/
-│   │   ├── admin.js                   # Lógica del dashboard
-│   │   ├── login.js                   # Lógica del login
-│   │   └── main.js                    # Lógica del chatbot
+│   ├── 📁 js/                           # JavaScript (lógica del cliente)
+│   │   ├── main.js                      # Lógica del chatbot
+│   │   ├── admin.js                     # Lógica del dashboard
+│   │   └── config.js                    # Configuración (detección URL API)
 │   │
-│   ├── images/                        # Imágenes de máquinas
-│   │   ├── hidrolavadora.jpg
-│   │   ├── generador.jpg
-│   │   ├── motor.jpg
-│   │   └── soldadora.jpg
+│   ├── 📁 css/                          # Estilos CSS
+│   │   ├── style.css                    # Estilos del chatbot
+│   │   └── admin.css                    # Estilos del dashboard
 │   │
-│   ├── index.html                     # Página principal (chatbot)
-│   ├── login.html                     # Página de login
-│   └── admin.html                     # Dashboard administrativo
+│   └── 📁 assets/                       # Recursos multimedia
+│       ├── 📁 img/
+│       │   ├── hidrolavadora.jpg
+│       │   ├── generador.jpg
+│       │   ├── motor.jpg
+│       │   ├── soldadora.jpg
+│       │   └── INSTRUCCIONES_IMAGENES.TXT
+│       
+├── 📄 COMO_USAR.txt                     # Guía de uso rápido
+├── 📄 README.md                         # Este archivo
 │
-├── README.md                          # Documentación del proyecto
-├── COMO_USAR.txt                      # Guía de uso rápido
-└── requirements.txt                   # Dependencias de Python
+├── 📋 requirements.txt                  # Dependencias Python
+├── 📋 mkdocs.yml                        # Configuración MkDocs para documentación
+│
+├── INICIAR_BIG_TOOLS.bat                # ⭐ Recomendado para Windows
+├── run.bat                              # Alternativa para Windows
+├── run.sh                               # Para Linux/macOS
+├──  run_simple.py                        # Script Python multiplataforma
+│
+├── .gitignore                           # Archivos ignorados por git
+│   └── 📁 venv/                         # Entorno virtual Python
+│
+└── 📁 .git/                             # Repositorio Git
 ```
 
 ---
