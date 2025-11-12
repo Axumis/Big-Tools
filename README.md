@@ -189,7 +189,7 @@ Big-tools/
 ├── 📄 README.md                         # Este archivo
 │
 ├── 📋 requirements.txt                  # Dependencias Python
-├── 📋 mkdocs.yml                        # Configuración MkDocs para documentación
+├── 📋 mkdocs.yml                        # Documentación en MKDocs
 │
 ├── INICIAR_BIG_TOOLS.bat                # ⭐ Recomendado para Windows
 ├── run.bat                              # Alternativa para Windows
