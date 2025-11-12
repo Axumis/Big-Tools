@@ -666,9 +666,9 @@ El proyecto incluye un **sitio de documentación profesional con MkDocs** (Mater
 pip install mkdocs-material
 
 # Generar y servir documentación localmente
-mkdocs serve
+mkdocs serve -a 127.0.0.1:8001
 
-# Acceder a: http://127.0.0.1:8000/
+# Acceder a: http://127.0.0.1:8001/
 ```
 
 **Características:**
